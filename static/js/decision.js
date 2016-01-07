@@ -1,0 +1,66 @@
+$(document).ready(function() {
+	// logic here 
+	$('form#answers').submit(function(e) {
+		e.preventDefault();
+		var answers = [
+  'No.',
+  'As I see it, yes.',
+  'Ask again later.',
+  'Better not tell you now.',
+  'Cannot predict now.',
+  'Concentrate and ask again.',
+  'Don’t count on it.',
+  'It is certain.',
+  'It is decidedly so.',
+  'Most likely.',
+  'My reply is no.',
+  'My sources say no.',
+  'Outlook good.',
+  'Outlook not so good.',
+  'Reply hazy, try again.',
+  'Signs point to yes.',
+  'Very doubtful.',
+  'Without a doubt.',
+  'Yes.',
+  'Yes, definitely.',
+  'You may rely on it.'
+  'Signs point to yes.',
+  'Yes.',
+  'Reply hazy, try again.',
+  'Without a doubt.',
+  'My sources say no.',
+  'As I see it, yes.',
+  'You may rely on it.',
+  'Concentrate and ask again.',
+  'Outlook not so good.',
+  'It is decidedly so.',
+  'Better not tell you now.',
+  'Very doubtful.',
+  'Yes - definitely.',
+  'It is certain.',
+  'Cannot predict now.',
+  'Most likely.',
+  'Ask again later.',
+  'My reply is no.',
+  'Outlook good.',
+  'Dont count on it.',
+  'Yes, in due time.',
+  'My sources say no.',
+  'Definitely not.',
+  'Yes.',
+  'You will have to wait.',
+  'I have my doubts.',
+  'Outlook so so.',
+  'Looks good to me!',
+  'Who knows?',
+  'Looking good!',
+  'Probably.',
+  'Are you kidding?',
+  'Go for it!',
+  'Dont bet on it.',
+  'Forget about it.'];
+  var random = answers[Math.floor(Math.random() * answers.length)];
+  $('div#answer').text(random).fadeIn('fast');
+
+	});
+});

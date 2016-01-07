@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Decisions</title>
+      <meta name="description" content="Decisions<" />
+      <meta charset="utf-8">
+
+      <!-- JS SCRIPTS -->
+      <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+      <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+      <!--  JQUERY AND JAVASCRRIPT SCRIPT CDN -->
+      <script type="text/javascript"
+      src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+      <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+      <!-- BOOTSTRAP CND -->
+      <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+      <!-- EXTERNAL CSS -->
+      <link rel="stylesheet" type="text/css" href="/static/css/magic8ball.css">
+      <link rel="stylesheet" type="text/css" href="/static/css/base.css">
+       
+      <link rel="stylesheet" type="text/css" href="/static/css/cssshake.min.css">
+      <!-- GOOGLE FONTS -->
+      <link href='https://fonts.googleapis.com/css?family=Passion+One|Bevan' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Poiret+One|Abel|Shadows+Into+Light' rel='stylesheet' type='text/css'>
+    </head><!--// END HEAD-->
+  <body><!--// BODY-->
+  <!--#######################   NAV BAR    ##################-->
+
+
+<div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Sitename</a>
+        </div>
+        <center>
+            <div class="navbar-collapse collapse" id="navbar-main">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Link</a>
+                    </li>
+                    <li><a href="#">Link</a>
+                    </li>
+                    <li><a href="#">Link</a>
+                    </li>
+                    <li><a href="#">Link</a>
+                    </li>
+                    <li><a href="#">Link</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Action</a>
+                            </li>
+                            <li><a href="#">Another action</a>
+                            </li>
+                            <li><a href="#">Something else here</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li><a href="#">Separated link</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li><a href="#">One more separated link</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="navbar-form navbar-right" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="username" placeholder="Username">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="password" placeholder="Password">
+                    </div>
+                    <button type="submit" class="btn btn-default">Sign In</button>
+                </form>
+            </div>
+        </center>
+    </div>
+</div>
+
+
+
+    <div class="container" id="header">
+      <div class="row">
+        <div class="col-md-12">
+
+            <h1>.  .Decisions.  .</h1>
+
+            <h4>Everday decisions just got easier!</h4>
+            <hr >
+        </div><!-- // end col-md-12-->
+      </div><!--// end row-->
+    </div><!-- // END HEADER-BOX -->
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <!--MAGIC EIGHT BALL -->
+
+            <div class="stage">
+              <figure class="ball shake">
+                <span class="shadow"></span>
+                <span class="eight"></span>
+              </figure>
+            </div><!-- // end stage-->
+        </div><!-- end col-md-12-->
+      </div><!-- end row-->
+      <div class="row">
+        <div class="col-md-12">
+         
+          <!-- FROM FOR QUESTION TO BE SUBMITTED-->
+          <p>Concentrate on your question and/or type it below, then ask the magic 8 ball</p>
+          <form id="question-form" method="post">Ask a question: <input type="text" name="question" id="question" size="70" />
+          <input type="submit" name="submit" value="Ask" />
+          <div style="display:none" id="answer"></div>
+          </form>
+          <br><br>
+           <p id="answerContainer"></p>
+        </div><!-- // end col-->
+      </div><!-- // end row-->
+
+<script>
+$(document).ready(function() {
+  // logic here 
+  $('form#decisions').submit(function(e) {
+  e.preventDefault();
+  var answers = [ 'No',
+   'As I see it, yes',
+   'Ask again later',
+   'Better not tell you now',
+   'Cannot predict now',
+   'Concentrate and ask again',
+   'Don’t count on it',
+   'It is certain',
+   'It is decidedly so',
+   'Most likely',
+   'My reply is no',
+   'My sources say no',
+   'Outlook good',
+   'Outlook not so good',
+   'Reply hazy, try again',
+   'Signs point to yes',
+   'Very doubtful',
+   'Without a doubt',
+   'Yes',
+   'Yes, definitely',
+   'You may rely on it',
+   'Signs point to yes',
+   'Yes',
+   'Reply hazy, try again',
+   'Without a doubt',
+   'My sources say no',
+   'As I see it, yes',
+   'You may rely on it',
+   'Concentrate and ask again',
+   'Outlook not so good',
+   'It is decidedly so',
+   'Better not tell you now',
+   'Very doubtful',
+   'Yes - definitely',
+   'It is certain',
+   'Cannot predict now',
+   'Most likely',
+   'Ask again later',
+   'My reply is no',
+   'Outlook good',
+   'Dont count on it',
+   'Yes, in due time',
+   'My sources say no',
+   'Definitely not',
+   'Yes',
+   'You will have to wait',
+   'I have my doubts',
+   'Outlook so so',
+   'Looks good to me!',
+   'Who knows?',
+   'Looking good!',
+   'Probably',
+   'Are you kidding?',
+   'Go for it!',
+   'Dont bet on it',
+   'Forget about it'
+ ];
+      var random = answers[Math.floor(Math.random() * answers.length)];
+      $('div#answer').text(random).fadeIn('fast');
+
+  });
+});
+</script>
+
+
+<script id="decisions" type="text/html"><!DOCTYPE html>
+<html>
+<head>
+<script src="//code.jquery.com/jquery-2.1.0.min.js"><\/script>
+<meta name="description" content="Magic 8 Ball" />
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+</head>
+<body>
+<form id="decisions-question" method="post">
+Ask a question: <input type="text" name="question" id="question" size="70" />
+<input type="submit" name="submit" value="Ask" />
+  <div style="display:none" id="answer"></div>
+</form>
+</body>
+</html>
+</script>
+
+<script id="decisions-css" type="text/css">#answer {
+    display: none;
+}</script>
+
+<script id="decisions-logic" type="text/javascript">$(document).ready(function() {
+    // start writing your magic 8 ball logic here!
+    $('form#question-form').submit(function(e) {
+      e.preventDefault();  
+      var answers = ['No',
+   'As I see it, yes',
+   'Ask again later',
+   'Better not tell you now',
+   'Cannot predict now',
+   'Concentrate and ask again',
+   'Don’t count on it',
+   'It is certain',
+   'It is decidedly so',
+   'Most likely',
+   'My reply is no',
+   'My sources say no',
+   'Outlook good',
+   'Outlook not so good',
+   'Reply hazy, try again',
+   'Signs point to yes',
+   'Very doubtful',
+   'Without a doubt',
+   'Yes',
+   'Yes, definitely',
+   'You may rely on it',
+   'Signs point to yes',
+   'Yes',
+   'Reply hazy, try again',
+   'Without a doubt',
+   'My sources say no',
+   'As I see it, yes',
+   'You may rely on it',
+   'Concentrate and ask again',
+   'Outlook not so good',
+   'It is decidedly so',
+   'Better not tell you now',
+   'Very doubtful',
+   'Yes - definitely',
+   'It is certain',
+   'Cannot predict now',
+   'Most likely',
+   'Ask again later',
+   'My reply is no',
+   'Outlook good',
+   'Dont count on it',
+   'Yes, in due time',
+   'My sources say no',
+   'Definitely not',
+   'Yes',
+   'You will have to wait',
+   'I have my doubts',
+   'Outlook so so',
+   'Looks good to me!',
+   'Who knows?',
+   'Looking good!',
+   'Probably',
+   'Are you kidding?',
+   'Go for it!',
+   'Dont bet on it',
+   'Forget about it'
+   ];
+        var random = answers[Math.floor(Math.random() * answers.length)];
+        $('div#answer').text(random).fadeIn('fast');
+    });
+});
+</script>
+  
+  </div><!-- // END MAIN CONTAINER -->
+<!--#######################    FOOTER   ########################-->
+            <!--FOOTER-->
+            <div class="container">
+                <div class="row">
+                <footer class="footer">
+                    <strong>Decisions</strong>
+                    <small class="text-muted">Copyright &copy; UP[CODE] 2015. All Rights Reserved</small>
+                </footer>
+                </div>
+            </div>
+               <!-- END FOOTER-->
+
+
+
+        </body><!--// END BODY-->
+    </html><!-- // END HTML-->
+ 
+         
+
+
+
+      
+
+
+
+

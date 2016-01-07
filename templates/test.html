@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Your page title here :)</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="/static/css/normalize.css">
+  <link rel="stylesheet" href="/static/css/skeleton.css">
+    <link rel="stylesheet" href="/static/animate.css">
+
+
+ <!-- EXTERNAL CSS -->
+      <link rel="stylesheet" type="text/css" href="/static/css/magic8ball.css">
+      <link rel="stylesheet" type="text/css" href="/static/css/base.css">
+       
+      <link rel="stylesheet" type="text/css" href="/static/css/cssshake.min.css">
+      <!-- JS SCRIPTS -->
+      <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+      <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+      <!--  JQUERY AND JAVASCRRIPT SCRIPT CDN -->
+      <script type="text/javascript"
+      src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+     
+      
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  <div class="container">
+    <div class="row">
+      <div class="one-half column" style="margin-top: 25%">
+         <h1 class="animated infinite bounce">Example</h1>
+
+         <h4>Decisions</h4>
+<hr >      <small>Everday decisions just got easier!</small>
+
+        <h4>Welcome!</h4>           
+ <p>Concentrate on your question and/or type it below, then ask the magic 8 ball <a href="http://www.getskeleton.com">Skeleton documentation</a>.</p>
+  <form id="question-form" method="post">Ask a question: <input type="text" name="question" id="question" size="35" />
+          <input type="submit" name="submit" value="Ask" />
+       </div>
+               <div class="one-half column" style="margin-top: 25%">
+
+         <div class="stage">
+              <figure class="ball shake">
+                <span class="shadow"></span>
+                <span class="eight"></span>
+              </figure>
+            </div><!-- // end stage-->
+         </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- FROM FOR QUESTION TO BE SUBMITTED-->
+          
+
+          <div style="display:none" id="answer"></div>
+          </form>
+          <br><br>
+           <p id="answerContainer"></p>
+
+      </div>
+    </div>
+  </div>
+  <script>
+$(document).ready(function() {
+  // logic here 
+  $('form#decisions').submit(function(e) {
+  e.preventDefault();
+  var answers = [ 'No',
+   'As I see it, yes',
+   'Ask again later',
+   'Better not tell you now',
+   'Cannot predict now',
+   'Concentrate and ask again',
+   'Don’t count on it',
+   'It is certain',
+   'It is decidedly so',
+   'Most likely',
+   'My reply is no',
+   'My sources say no',
+   'Outlook good',
+   'Outlook not so good',
+   'Reply hazy, try again',
+   'Signs point to yes',
+   'Very doubtful',
+   'Without a doubt',
+   'Yes',
+   'Yes, definitely',
+   'You may rely on it',
+   'Signs point to yes',
+   'Yes',
+   'Reply hazy, try again',
+   'Without a doubt',
+   'My sources say no',
+   'As I see it, yes',
+   'You may rely on it',
+   'Concentrate and ask again',
+   'Outlook not so good',
+   'It is decidedly so',
+   'Better not tell you now',
+   'Very doubtful',
+   'Yes - definitely',
+   'It is certain',
+   'Cannot predict now',
+   'Most likely',
+   'Ask again later',
+   'My reply is no',
+   'Outlook good',
+   'Dont count on it',
+   'Yes, in due time',
+   'My sources say no',
+   'Definitely not',
+   'Yes',
+   'You will have to wait',
+   'I have my doubts',
+   'Outlook so so',
+   'Looks good to me!',
+   'Who knows?',
+   'Looking good!',
+   'Probably',
+   'Are you kidding?',
+   'Go for it!',
+   'Dont bet on it',
+   'Forget about it'
+ ];
+      var random = answers[Math.floor(Math.random() * answers.length)];
+      $('div#answer').text(random).fadeIn('fast');
+
+  });
+});
+</script>
+
+
+<script id="decisions" type="text/html"><!DOCTYPE html>
+<html>
+<head>
+<script src="//code.jquery.com/jquery-2.1.0.min.js"><\/script>
+<meta name="description" content="Magic 8 Ball" />
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+</head>
+<body>
+<form id="decisions-question" method="post">
+Ask a question: <input type="text" name="question" id="question" size="70" />
+<input type="submit" name="submit" value="Ask" />
+  <div style="display:none" id="answer"></div>
+</form>
+</body>
+</html>
+</script>
+
+<script id="decisions-css" type="text/css">#answer {
+    display: none;
+}</script>
+
+<script id="decisions-logic" type="text/javascript">$(document).ready(function() {
+    // start writing your magic 8 ball logic here!
+    $('form#question-form').submit(function(e) {
+      e.preventDefault();  
+      var answers = ['No',
+   'As I see it, yes',
+   'Ask again later',
+   'Better not tell you now',
+   'Cannot predict now',
+   'Concentrate and ask again',
+   'Don’t count on it',
+   'It is certain',
+   'It is decidedly so',
+   'Most likely',
+   'My reply is no',
+   'My sources say no',
+   'Outlook good',
+   'Outlook not so good',
+   'Reply hazy, try again',
+   'Signs point to yes',
+   'Very doubtful',
+   'Without a doubt',
+   'Yes',
+   'Yes, definitely',
+   'You may rely on it',
+   'Signs point to yes',
+   'Yes',
+   'Reply hazy, try again',
+   'Without a doubt',
+   'My sources say no',
+   'As I see it, yes',
+   'You may rely on it',
+   'Concentrate and ask again',
+   'Outlook not so good',
+   'It is decidedly so',
+   'Better not tell you now',
+   'Very doubtful',
+   'Yes - definitely',
+   'It is certain',
+   'Cannot predict now',
+   'Most likely',
+   'Ask again later',
+   'My reply is no',
+   'Outlook good',
+   'Dont count on it',
+   'Yes, in due time',
+   'My sources say no',
+   'Definitely not',
+   'Yes',
+   'You will have to wait',
+   'I have my doubts',
+   'Outlook so so',
+   'Looks good to me!',
+   'Who knows?',
+   'Looking good!',
+   'Probably',
+   'Are you kidding?',
+   'Go for it!',
+   'Dont bet on it',
+   'Forget about it'
+   ];
+        var random = answers[Math.floor(Math.random() * answers.length)];
+        $('div#answer').text(random).fadeIn('fast');
+    });
+});
+</script>
+   <div class="container">
+      <div class="row">
+       <footer class="footer">
+           <strong>Decisions</strong>
+           <small class="text-muted">Copyright &copy; UP[CODE] 2015. All Rights Reserved</small>
+       </footer>
+      </div>
+   </div>
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
+           

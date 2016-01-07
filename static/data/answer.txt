@@ -1,0 +1,56 @@
+   0   |   No
+   1   |   As I see it, yes
+   2   |   Ask again later
+   3   |   Better not tell you now
+   4   |   Cannot predict now
+   5   |   Concentrate and ask again
+   6   |   Don’t count on it
+   7   |   It is certain
+   8   |   It is decidedly so
+   9   |   Most likely
+   10  |   My reply is no
+   11  |   My sources say no
+   12  |   Outlook good
+   13  |   Outlook not so good
+   14  |   Reply hazy, try again
+   15  |   Signs point to yes
+   16  |   Very doubtful
+   17  |   Without a doubt
+   18  |   Yes
+   19  |   Yes, definitely
+   20  |   You may rely on it.
+   21  |   Signs point to yes.
+   22  |   Yes.
+   23  |   Reply hazy, try again.
+   24  |   Without a doubt.
+   25  |   My sources say no.
+   26  |   As I see it, yes.
+   27  |   You may rely on it.
+   28  |   Concentrate and ask again.
+   29  |   Outlook not so good.
+   30  |   It is decidedly so.
+   31  |   Better not tell you now.
+   32  |   Very doubtful.
+   33  |   Yes - definitely.
+   34  |   It is certain.
+   35  |   Cannot predict now.
+   36  |   Most likely.
+   37  |   Ask again later.
+   38  |   My reply is no.
+   39  |   Outlook good.
+   40  |   Don't count on it.
+   41  |   Yes, in due time.
+   42  |   My sources say no.
+   43  |   Definitely not.
+   44  |   Yes.
+   45  |   You will have to wait.
+   46  |   I have my doubts.
+   47  |   Outlook so so.
+   48  |   Looks good to me!
+   49  |   Who knows?
+   50  |   Looking good!
+   51  |   Probably.
+   52  |   Are you kidding?
+   53  |   Go for it!
+   54  |   Don't bet on it.
+   55  |   Forget about it.
